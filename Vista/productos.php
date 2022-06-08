@@ -1,4 +1,10 @@
-
+<?php
+  require_once("../Modelo/conexionDb.php");
+  require_once("../Modelo/Tienda/registroTienda.php");
+  $tienda = new funcionesTienda();
+  $listaTiendas=$tienda -> consultar();
+  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +24,7 @@
 <h3 class="text-center">Registrar productos</h3>
 <hr>
 
-  <form action="../Controlador/ControllerTienda.php" Method="POST" name="registroTienda" id="registoTienda">
-    <div class="form-group">
-      <label class="">Sku</label>
-      <input type="text" class="form-control " id="Sku" name="Sku" placeholder="Sku">
-
-    </div>
-
+  <form action="../Controlador/ControllerProductos.php" Method="POST" name="RegistroProductos" id="registoTienda">
    
     <div class="form-group">
       <label class="">Nombre</label>
@@ -43,9 +43,18 @@
 
     <div class="form-group">
       <label class="">Tienda</label>
-      <input type="text" class="form-control " id="tienda" name="tienda" placeholder="Tienda">
-    </div>
+    <select class="form-control" name="tienda" id="tienda">
+    <?php
+        foreach ($listaTiendas as $item ) {
+          ?>
+          <option value="<?php echo $item["ID"] ?>"><?php echo $item["Nombre"] ?></option>
+          <?php
+        }
 
+?>
+
+    </select>
+    </div>
     <div class="form-group">
       <label class="">Imagen</label>
       <input type="file" class="form-control " id="imagen" name="imagen" placeholder="Imagen">
