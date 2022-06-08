@@ -18,8 +18,7 @@
 </head>
 
 
-<body>
-
+<body><div class="row justify-content-end"><a href="Tienda.php" class="btn btn-primary col-2 m-3">Tienda</a></div>
 <div class="container-fluid col-5 bg-white p-4">
 <h3 class="text-center">Registrar productos</h3>
 <hr>
@@ -38,7 +37,7 @@
 
     <div class="form-group">
       <label class="">Valor</label>
-      <input type="text" class="form-control " id="valor" name="valor" placeholder="Valor">
+      <input type="number" class="form-control " id="valor" name="valor" placeholder="Valor">
     </div>
 
     <div class="form-group">

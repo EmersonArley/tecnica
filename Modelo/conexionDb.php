@@ -16,4 +16,3 @@ class Db{
     } 
 }
 $res= Db::conectar();
- echo var_dump($res);

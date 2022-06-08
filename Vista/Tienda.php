@@ -9,7 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-
+<div class="row justify-content-end"><a href="productos.php" class="btn btn-primary col-2 m-3">Productos</a></div>
 <div class="container-fluid col-5 bg-white p-4">
 <h3 class="text-center">Registrar tienda</h3>
 <hr>
